@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <div class="row justify-content-center">
+          <h1 class="h3 mb-3">請先登入</h1>
+          <div class="col-8">
+            <form id="form" class="form-input" @submit.prevent="login">
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="emailInput"
+                  v-model="user.username"
+                  placeholder="name@example.com"
+                  autofocus
+                  required
+                />
+                <label for="emailInput">Email address</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control"
+                  id="passwordInput"
+                  v-model="user.password"
+                  placeholder="name@example.com"
+                  required
+                />
+                <label for="passwordInput">password</label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg w-100">
+                登入
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/js/index.js" type="module"></script>
+  </body>
+</html>
